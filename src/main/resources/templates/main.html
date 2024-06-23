@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form action="/products/add" method="post">
+        <label for="product-name">Product name: </label>
+        <input type="text" name="name" id="product-name">
+        <span><button type="submit">Add</button></span>
+        <input type="hidden"
+               th:name="${_csrf.parameterName}"
+               th:value="${_csrf.token}" />
+    </form>
+</body>
+</html>
